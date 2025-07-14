@@ -1,0 +1,26 @@
+{
+  "tariffs": [
+    {
+      "combination": ["es", "ca", "ca", "es"],
+      "translation": 0.08,
+      "postedition": 0.05
+    },
+    {
+      "combination": ["en", "fr", "it", "pt"],
+      "target": ["es", "ca"],
+      "translation": 0.10,
+      "postedition": 0.07
+    },
+    {
+      "combination": ["de"],
+      "target": ["es", "ca"],
+      "translation": 0.12,
+      "postedition": 0.09
+    }
+  ],
+  "productivity": {
+    "translation": 2500,
+    "postedition": 6000,
+    "revision": 8000
+  }
+}
