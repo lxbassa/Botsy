@@ -91,26 +91,37 @@ def info_menu():
 def change_lang():
     global text
     print(text["change_language"])
-    print(text["change_lang_list"].format(text["ca"].capitalize(),
-    text["es"].capitalize(), text["en"].capitalize() ))
+    print(text["change_lang_list"].format(
+        text["ca"].capitalize(),
+        text["es"].capitalize(),
+        text["en"].capitalize()
+    ))
 
     while True:
         try:
             ans = int(input())
-            
             if ans == 1:
                 with open("languages/catalan.json", encoding="utf-8") as f:
-                    return json.load(f)
+                    text = json.load(f)
+                print(text["hello"])
+                return
             elif ans == 2:
                 with open("languages/spanish.json", encoding="utf-8") as f:
-                    return json.load(f)
+                    text = json.load(f)
+                print(text["hello"])
+                return
             elif ans == 3:
                 with open("languages/english.json", encoding="utf-8") as f:
-                    return json.load(f)
+                    text = json.load(f)
+                print(text["hello"])
+                return
             elif ans == 4:
-                return None  
+                return
+            else:
+                print(text["wrong_answer"])
         except ValueError:
             print(text["wrong_answer"])
+
 
 #------------------------------------------------------
 # Calculator
